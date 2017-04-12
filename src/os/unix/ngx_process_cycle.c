@@ -122,6 +122,7 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
         p = ngx_cpystrn(p, (u_char *) ngx_argv[i], size);
     }
 
+    // 更改进程名
     ngx_setproctitle(title);
 
 
