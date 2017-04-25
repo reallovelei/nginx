@@ -2,6 +2,8 @@
 /*
  * Copyright (C) Igor Sysoev
  * Copyright (C) Nginx, Inc.
+ * 全局debug
+ * ngx_log_debug0(NGX_LOG_DEBUG_CORE, ngx_cycle->log, 0, "timer signal");
  */
 
 

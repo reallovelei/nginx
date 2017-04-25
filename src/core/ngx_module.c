@@ -27,10 +27,13 @@ ngx_preinit_modules(void)
 {
     ngx_uint_t  i;
 
+    FILE *fp = fopen("/usr/local/nginx/logs/lei.log", "w+");
     for (i = 0; ngx_modules[i]; i++) {
+        fprintf(fp, "init modules  name:%s \n", ngx_module_names[i]);
         ngx_modules[i]->index = i;
         ngx_modules[i]->name = ngx_module_names[i];
     }
+    fclose(fp);
 
     ngx_modules_n = i;
     ngx_max_module = ngx_modules_n + NGX_MAX_DYNAMIC_MODULES;
